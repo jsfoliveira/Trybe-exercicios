@@ -1,0 +1,37 @@
+h1 {
+    font-size: 65px;
+    color:orange;
+    font-family: sans-serif;
+}
+
+.color{
+    background-color: blue;
+}
+
+body p {
+    font-weight: 600;
+    font-size: 3em;
+}
+
+footer  p{
+    font-size: bold;
+    line-height: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+body {
+    font-size: 16px;
+}
+
+.amarelo {
+    background-color: yellow;
+}
+
+.vermelho {
+    background-color: red;
+}
+
+.marrom {
+    background-color: brown;
+}
