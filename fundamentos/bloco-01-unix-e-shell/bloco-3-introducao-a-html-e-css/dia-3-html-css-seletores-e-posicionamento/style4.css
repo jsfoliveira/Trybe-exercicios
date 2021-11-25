@@ -1,0 +1,56 @@
+div:hover {
+    border: 5px solid #000;
+}
+
+.corPrimaria {
+    background-color: red;
+    width: 200px;
+   
+}
+
+.corSecundaria {
+    background-color: orange;
+    width: 200px;
+}
+
+.corComplementar {
+    background-color: indigo;
+    width: 400px;
+}
+
+.corEscura {
+    background-color: maroon;
+    width: 200px;
+}
+
+.corClara {
+    background-color: lemonchiffon;
+    width: 200px;
+}
+
+.corPrimaria h3{
+    font-family: 'Courier New', Courier, monospace;
+    width: 200px;
+}
+
+.corSecundaria h3{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.corComplementar h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.corClara h3{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.corEscura h3{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+div:nth-child(odd) {
+    font-style: italic;
+}
+/* div:nth-child(odd)  -> vai estilizar a div com número par. div:nth-child(even) vai ser do número ímpar.

@@ -1,0 +1,60 @@
+ul li {
+    background-color: yellow;
+    font-size: 20px;
+}
+
+ul li:nth-child(odd){
+    color: green;
+}
+
+ul li:nth-child(even){
+    text-transform: uppercase;
+}
+
+/*Na listagem de linguagens de programação, 
+faça com que as 3 primeiras da lista possuam 
+cor de fonte azul */
+ul:nth-of-type(2) li:nth-child(-n+3) {
+    color:rgb(212, 6, 168);
+}
+
+/*Atributo de seletores. se alguma possuir 
+"java*" no texto, utilize uma cor de fundo rosa.
+*/
+.pink-bg{
+    color: pink;
+}
+
+h1, h3{
+    color: red;
+}
+
+ol li{
+    font-weight: 40px;
+    border: 1px solid black;
+}
+
+.stackOverflow:hover {
+    font-weight: bold;
+    color:orange;
+}
+
+.m3Schools:hover {
+    font-weight: bold;
+    color: green;
+}
+
+.mozilla:hover {
+    font-weight: bold;
+    color: orangered;
+}
+
+.devDocs:hover {
+    font-weight: bold;
+    color: rgb(172, 169, 169);
+}
+
+.trybe:hover {
+    font-weight: bold;
+    color: rgb(15, 85, 6);
+}
