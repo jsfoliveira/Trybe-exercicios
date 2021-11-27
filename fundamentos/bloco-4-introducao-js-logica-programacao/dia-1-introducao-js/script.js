@@ -93,3 +93,34 @@
 
 //EXERCÍCIOS
 //QUESTÃO 01
+// let a = 3;
+// let b = 4;
+// let adicao = a + b;
+// let subtracao = a - b;
+// let multiplicacao = a * b;
+// let divisao = a / b;
+// let modulo = a % b;
+// console.log(adicao);
+// console.log(subtracao);
+// console.log(multiplicacao);
+// console.log(divisao);
+// console.log(modulo);
+
+//QUESTAO 02
+// let a = 2;
+// let b = 5;
+// if (a < b) {
+//   console.log(b);
+// }
+
+//QUESTAO 03
+// let a = 2;
+// let b = 5;
+// let c = 10;
+// if (a > b && a > c) {
+//   console.log(a);
+// } else if (b > c && b > a) {
+//   console.log(b);
+// } else {
+//   console.log(c);
+// }
