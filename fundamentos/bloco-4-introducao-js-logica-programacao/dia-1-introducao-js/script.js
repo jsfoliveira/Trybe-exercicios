@@ -124,3 +124,68 @@
 // } else {
 //   console.log(c);
 // }
+
+//QUESTAO 04
+// let valor = 10;
+// if (valor > 0) {
+//   console.log("Valor positivo");
+// } else if (valor < 0) {
+//   console.log("Valor negativo");
+// } else {
+//   console.log("Valor nulo");
+// }
+
+//QUESTAO 05: Faça um programa que defina três constantes com os valores dos três ângulos internos de um triângulo. Retorne true se os ângulos representarem os ângulos de um triângulo e false , caso contrário. Se algum ângulo for inválido o programa deve retornar uma mensagem de erro.
+//RESOLUÇÃO: A soma dos angulos internos de um triângulo deve ser 180º e os ângulos devem ser positivos.
+// let angulo1 = 65;
+// let angulo2 = 100;
+// let angulo3 = 15;
+// let somaAngulos = angulo1 + angulo2 + angulo3;
+// let angulosPositivos = angulo1 > 0 && angulo2 > 0 && angulo3 > 0;
+// if (angulosPositivos) {
+//   if (somaAngulos === 180) {
+//     console.log(true);
+//   } else {
+//     console.log(false);
+//   }
+// } else {
+//   console.log("Erro:ângulo inválido");
+// }
+
+//QUESTAO 06: Escreva um programa que receba o nome de uma peça de xadrez e retorne os movimentos que ela faz.
+// var pecaXadrez = "rei";
+
+// switch (pecaXadrez.toLowerCase()) {
+//   case "rei":
+//     console.log("Move-se para todas as direções");
+//     break;
+//   case "dama ou rainha":
+//     console.log(
+//       "Pode mover-se pelas colunas, fileiras e diagonal de outra cor"
+//     );
+//     break;
+//   case "cavalo":
+//     console.log("Movimenta-se em L");
+//     break;
+//   case "torre":
+//     console.log("movimenta-se em direção reta pelas colunas ou fileiras");
+//     break;
+//   case "peão":
+//     console.log(
+//       "movimenta-se apenas uma casa para frente e captura outros peões e peças em diagonal"
+//     );
+//     break;
+//   default:
+//     console.log("Erro, peça inválida");
+//     break;
+// }
+
+//QUESTÃO 07:Escreva um programa que converta uma nota dada em porcentagem (de 0 a 100) em conceitos de A a F. O programa deve retornar uma mensagem de erro e encerrar se a nota passada for menor que 0 ou maior que 100.
+// const nota = 96;
+// let a = 90;
+
+// if (nota < 0 || nota > 100) {
+//   console.log("Erro, nota incorreta");
+// } else if (nota >= a) {
+//   console.log(a + "%");
+// }
