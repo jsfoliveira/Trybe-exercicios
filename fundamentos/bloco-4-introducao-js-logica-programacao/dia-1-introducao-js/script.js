@@ -189,3 +189,59 @@
 // } else if (nota >= a) {
 //   console.log(a + "%");
 // }
+
+//QUESTAO 08:Escreva um programa que defina três números em variáveis no seu começo e retorne true se pelo menos uma das três for par. Caso contrário, ele deve retornar false .
+// const a = 1;
+// const b = 3;
+// const c = 5;
+// let isEven = false;
+// if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+//   isEven = true;
+// }
+// console.log(isEven);
+
+//QUESTAO 09:Escreva um programa que defina três números em constantes no seu começo e retorne true se pelo menos uma das três for ímpar. Caso contrário, ele deve retornar false
+// const a = 1;
+// const b = 3;
+// const c = 5;
+// let impar = false;
+// if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+//   impar = true;
+// }
+// console.log(impar);
+
+//QUESTAO 10
+// const valorCusto = 1;
+// const valorVenda = 3;
+
+// if (valorCusto >= 0 && valorVenda >= 0) {
+//   const valorCustoTotal = valorCusto * 1.2;
+//   const total = (valorVenda - valorCustoTotal) * 1000;
+//   console.log(total);
+// } else {
+//   console.log("Error, os valores não podem ser negativos");
+// }
+
+//QUESTAO 11
+// let aliquotaINSS;
+// let aliquotaIR;
+// let salario = 2000;
+
+// if (salario <= 1556.94) {
+//   console.log((aliquotaINSS = salario * 0.08));
+// } else if (salario > 1556.95 && salario < 2594.92) {
+//   console.log((aliquotaINSS = salario * 0.09));
+// } else if (salario > 2594.92 && salario < 5189.82) {
+//   console.log((aliquotaINSS = salario * 0.11));
+// } else if (salario > 5189.82) {
+//   console.log((aliquotaINSS = salario + 570.88));
+// }
+
+// if (salario <= 1903.98) {
+//   console.log((aliquotaIR = 0));
+// } else if (salario > 1903.98 && salario < 2826.65) {
+//   console.log((aliquotaIR = salario * 0.075 - 142.8));
+// }
+
+// let salarioliquido = salario - aliquotaINSS - aliquotaIR;
+// console.log(salarioliquido);
