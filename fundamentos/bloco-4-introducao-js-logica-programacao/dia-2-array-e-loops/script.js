@@ -75,11 +75,60 @@
 
 //EXERCICIO 06
 //Descubra quantos valores ímpares existem no array e imprima o resultado. Caso não exista nenhum, imprima a mensagem: "nenhum valor ímpar encontrado"
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let impar = [0];
+//definir array
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+//definir variavel com os valores impares
+// let impar = 0;
+//criar o loop
+//criar codicional se tiver impar, falar quantos
+//se não tiver, colocar "nenhum valor ímpar encontrado"
+// for (let i = 0; i < numbers.length; i++) {
+//   if (numbers[i] % 2 !== 0) {
+//     impar = impar + 1;
+//   }
+// }
+// if (impar === 0) {
+//   console.log("Nenhum valor ímpar encontrado");
+// } else {
+//   console.log(impar);
+// }
 
-for (let i = 0; i < numbers.length; i++) {
-  if (numbers[0] % 2 !== 0) {
-    impar = impar + 1;
+//EXERCICIO BLOCO 04/03
+// let n = 5;
+// let str = "*";
+// for (i = 0; i < n; i++) {
+//   console.log(str.repeat(n));
+// }
+//EXERCICIO 07:Utilizando for , descubra qual o menor valor contido no array e imprima-o
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let menorNumero = numbers[0];
+for (let i = 1; i < numbers.length; i += 1) {
+  if (menorNumero > numbers[i]) {
+    menorNumero = numbers[i];
   }
 }
+console.log(menorNumero);
+
+//EXERCICIO 08:Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado
+//cria variado do array vazio
+// let resultado = [];
+//cria o loop com o push para empurrar os dados gerados no array para entrar no resultado
+// for (let i = 1; i <= 25; i++) {
+//   resultado.push(i);
+// }
+//imprimi o resultado
+// console.log(resultado);
+
+//EXERCICIO 09: Utilizando o array criado no exercício anterior imprima o resultado da divisão de cada um dos elementos por 2
+//Criar os dois arrays
+// let numeros = [
+//   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22,
+//   23, 24, 25,
+// ];
+// let novoArray = [];
+//Criar o loop e dentro dele colocar a divisão pro 2 de cada item do array
+// for (let i = 0; i < numeros.length; i += 1) {
+//   novoArray[i] = numeros[i] / 2;
+// }
+// console.log(novoArray);
+//OUTRA RESOLUÇÃO DO EXERCICIO 09: console.log(numeros.map((x) => x / 2));
