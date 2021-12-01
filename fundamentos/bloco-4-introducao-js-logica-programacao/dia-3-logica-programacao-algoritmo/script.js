@@ -59,7 +59,7 @@
 //  ***
 // *****
 //RESOLUÇÃO
-let n = 21; //quantidade de celulas por linha (tamanho da base da pirâmide)
+let n = 21; //quantidade de colunas / celulas por linha (tamanho da base da pirâmide)
 let m = 1; // quantidade de asteriscos por linha
 let q = (n + 1) / 2; // Quantidade de linhas
 let str1 = "@";
