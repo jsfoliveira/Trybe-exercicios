@@ -100,14 +100,14 @@
 //   console.log(str.repeat(n));
 // }
 //EXERCICIO 07:Utilizando for , descubra qual o menor valor contido no array e imprima-o
-let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-let menorNumero = numbers[0];
-for (let i = 1; i < numbers.length; i += 1) {
-  if (menorNumero > numbers[i]) {
-    menorNumero = numbers[i];
-  }
-}
-console.log(menorNumero);
+// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+// let menorNumero = numbers[0];
+// for (let i = 1; i < numbers.length; i += 1) {
+//   if (menorNumero > numbers[i]) {
+//     menorNumero = numbers[i];
+//   }
+// }
+// console.log(menorNumero);
 
 //EXERCICIO 08:Utilizando for, crie um array que vá de 1 até 25 e imprima o resultado
 //cria variado do array vazio
