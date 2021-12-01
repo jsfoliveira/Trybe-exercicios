@@ -93,12 +93,6 @@
 //   console.log(impar);
 // }
 
-//EXERCICIO BLOCO 04/03
-// let n = 5;
-// let str = "*";
-// for (i = 0; i < n; i++) {
-//   console.log(str.repeat(n));
-// }
 //EXERCICIO 07:Utilizando for , descubra qual o menor valor contido no array e imprima-o
 // let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 // let menorNumero = numbers[0];
