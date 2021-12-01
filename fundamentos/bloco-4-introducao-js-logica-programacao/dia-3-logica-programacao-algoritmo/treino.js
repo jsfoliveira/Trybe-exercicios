@@ -19,19 +19,17 @@
 // }
 
 //Agora inverta o lado do triângulo
-let n = 5;
-let m = n - 4;
-let str1 = "*";
-let str2 = " ";
-for (let i = 0; i < n; i += 1) {
-  let strImprimir = str2.repeat(n - m) + str1.repeat(m);
-  console.log(strImprimir);
-}
-5- 4 = 1
-1 +1 = 2
-2 + 1 =3
-3 + 1 =4
-4 + 1 = 5
+// let n = 5;
+// let m = n - 4;
+// let str1 = "*";
+// let str2 = " ";
+// for (let i = 0; i < n; i += 1) {
+//   let strImprimir = str2.repeat(n - m) + str1.repeat(m);
+//   console.log(strImprimir);
+//   m = m + 1;
+// }
+//  5-1 = 4 e 5-4 = 1
+//  5-2= 3 e 1 +1 = 2
 
 // let n = 5;
 // let m = n - 4;
