@@ -63,13 +63,13 @@
 //   console.log("Valor menor ou igual a 20");
 // }
 
-//EXERCICIOS 05: Utilizando for , descubra qual o maior valor contido no array e imprima-o
+// EXERCICIO 4, BLOCO 4 DIA 2
 // let numeros = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
-// let maiorNumero = numeros[0];
+// let maiorNumero = 0;
 // for (let i = 1; i < numeros.length; i++) {
-//   if (numeros[0] > maiorNumero) {
-//     maiorNumero = numero[i];
-//   }
+// if (numeros[i] > maiorNumero) {
+// maiorNumero = numeros[i];
+// }
 // }
 // console.log(maiorNumero);
 
