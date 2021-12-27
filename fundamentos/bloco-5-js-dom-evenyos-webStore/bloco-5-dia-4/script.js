@@ -71,7 +71,7 @@ for (let i = 0; i < filhosEspacamento.length; i += 1){
     for (let i = 0; i < paragrafo.length; i += 1){
       let fontFamily = event.target.innerText;
       paragrafo[i].style.fontFamily = fontFamily;
-      localStorage.setItem('fontFamily', fontFamily);
+      localStorage.setItem('fontFamily', fontFamily);   
     }
   }
   filhosFonte[i].addEventListener('click', mudarFonte);
