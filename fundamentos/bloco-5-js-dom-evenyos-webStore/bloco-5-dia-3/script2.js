@@ -32,13 +32,15 @@ function createDaysOfTheMonth() {
   for (let i = 0; i < dezDaysList.length; i += 1) {
     let dia = dezDaysList[i];
     let itemDia = document.createElement("li");
+
     // 24 holiday
     // 25 holiday friday
-    //31 holiday
-    //4 friday
-    //11 friday
-    //18 friday
-    //todos tem day
+    // 31 holiday
+    // 4 friday
+    // 11 friday
+    // 18 friday
+    // todos tem day
+
     if ((dia === 24) | (dia === 31)) {
       itemDia.className = "day holiday";
       itemDia.innerText = dia;
@@ -70,6 +72,7 @@ function criarBtn(feriados) {
 criarBtn("feriados");
 
 //Implemente uma função que adicione ao botão "Feriados" um evento de "click" que muda a cor de fundo dos dias que possuem a classe "holiday".
+
 let botao = document.querySelector("#btn-holiday");
 let holiday = document.querySelectorAll(".holiday");
 let backgroundColor = "rgb(238,238,238)";
@@ -87,6 +90,7 @@ botao.addEventListener("click", mudarCorHoliday);
 
 mudarCorHoliday();
 //Implemente uma função que receba como parâmetro a string "Sexta-feira" e crie dinamicamente um botão com o nome "Sexta-feira".
+
 function criarBtnFriday (buttonName){
   let buttonsContainer = document.querySelector('.buttons-container');
   let btnFriday = document.createElement('button');
@@ -95,21 +99,60 @@ function criarBtnFriday (buttonName){
   btnFriday.innerText = buttonName;
 }
 criarBtnFriday('Sexta-feira');
-//NÃO CONSEGUI
+
 //Implemente uma função que adicione ao botão "Sexta-feira" um evento de "click" que modifica o texto exibido nos dias que são Sexta-feira.
 //clicar no botao friday e acessar os days que tem a classe friday e mudar seu texto
 
-// function mudarTextoFriday (){
-//   let btnFriday = document.querySelector('#btn-friday');
-//   let getDayList = document.querySelector("#days");
-//   for (let i = 0; i < getDayList.length; i += 1) {
-//     if (getDayList[i].className = friday){
-//       getDayList[i].innerText = "Sextou!"
-//     }
-//   }
-// }
-// btnFriday.addEventListener('click', mudarTextoFriday);
+let btnFriday = document.querySelector('#btn-friday');
+let friday = document.querySelectorAll('.friday');
+function mudarTextoFriday (){
+  for (let i = 0; i < friday.length; i += 1){
+    friday[i].innerText = 'SEXTOU!';
+  }
+}
+btnFriday.addEventListener('click', mudarTextoFriday);
+//Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+let day = document.querySelectorAll('.day');
+for (let i = 0; i < day.length; i += 1){
+  function zoomTexto (){
+    if (day[i].style.fontSize == '20px'){
+      day[i].style.fontSize = '30px';
+    } else if (day[i].style.fontSize = '30px'){
+      day[i].style.fontSize = '20px';
+    }
+  }
+  day[i].addEventListener('mouseover', zoomTexto);
+}
+//Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
+function newTaskDiv(color) {
+
+  let tasksContainer = document.querySelector('.my-tasks');
+  let newTask = document.createElement('div');
+
+  newTask.className = 'task';
+  newTask.style.backgroundColor = color;
+  tasksContainer.appendChild(newTask);
+};
+
+newTaskDiv('green');
+
+//Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
+
+let selectedTask = document.getElementsByClassName('task selected');
+let task = document.querySelector('.task');
+function clicarCorTask (event){
+    if (task.className == "task"){
+      event.target.className = "task selected";
+    } else if (task.className == "task selected"){
+      event.target.className = "task";
+    }
+}
+task.addEventListener('click', clicarCorTask);
+//Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
+
+
 //Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
+
 function newTaskSpan(task) {
 
   let tasksContainer = document.querySelector('.my-tasks');
@@ -119,8 +162,13 @@ function newTaskSpan(task) {
   
 };
 
-newTaskSpan('Projeto:');
+newTaskSpan('Projetos:');
 //BÔNUS Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
+
+
+
+
+
 
 let digitarInput = document.querySelector('#task-input');
 let btnAdd = document.querySelector('#btn-add');
