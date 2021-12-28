@@ -23,7 +23,7 @@ createDaysOfTheWeek();
 
 // Escreva seu código abaixo.
 const dezDaysList = [
-  29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  '', '', '', '', '', 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
   21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
 ];
 function createDaysOfTheMonth() {
@@ -33,23 +33,24 @@ function createDaysOfTheMonth() {
     let dia = dezDaysList[i];
     let itemDia = document.createElement("li");
 
-    // 24 holiday
-    // 25 holiday friday
-    // 31 holiday
-    // 4 friday
-    // 11 friday
-    // 18 friday
+    
+   // 30 holiday
+   //1 holiday friday
+    // 8 friday
+    // 15 friday
+    // 22 friday
+    // 29 friday
     // todos tem day
 
-    if ((dia === 24) | (dia === 31)) {
+    if ((dia === 2) | (dia === 2)) {
       itemDia.className = "day holiday";
       itemDia.innerText = dia;
       getDayList.appendChild(itemDia);
-    } else if (dia === 25) {
+    } else if (dia === 1) {
       itemDia.className = "day holiday friday";
       itemDia.innerText = dia;
       getDayList.appendChild(itemDia);
-    } else if ((dia === 4) | (dia === 11) | (dia === 18)) {
+    } else if ((dia === 8) | (dia === 15) | (dia === 22) | (dia === 29)) {
       getDayList.appendChild(itemDia);
       itemDia.className = "day friday";
       itemDia.innerText = dia;
@@ -61,6 +62,7 @@ function createDaysOfTheMonth() {
   }
 }
 createDaysOfTheMonth();
+
 //Implemente uma função que receba como parâmetro a string "Feriados" e crie dinamicamente um botão com o nome "Feriados".
 function criarBtn(feriados) {
   let botao = document.createElement("button");
@@ -112,17 +114,41 @@ function mudarTextoFriday (){
 }
 btnFriday.addEventListener('click', mudarTextoFriday);
 //Implemente duas funções que criem um efeito de "zoom". Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
-let day = document.querySelectorAll('.day');
+
+
+let day = document.getElementsByClassName('day');
 for (let i = 0; i < day.length; i += 1){
-  function zoomTexto (){
-    if (day[i].style.fontSize == '20px'){
-      day[i].style.fontSize = '30px';
-    } else if (day[i].style.fontSize = '30px'){
-      day[i].style.fontSize = '20px';
-    }
-  }
-  day[i].addEventListener('mouseover', zoomTexto);
+  day[i].addEventListener('click', pintarDia);
+  day[i].addEventListener('dblclick', pintarDia2);
 }
+
+function pintarDia(event){
+  event.target.style.backgroundColor = getComputedStyle(
+    document.querySelector('.selected')
+  ).backgroundColor;
+}
+
+function pintarDia2(event){
+  event.target.style.backgroundColor = getComputedStyle(
+    document.querySelector('.selected2')
+  ).backgroundColor;
+}
+
+
+// day[i].addEventListener('click', function pintarDia (){
+//   alert('oi')
+// })
+// let day = document.querySelectorAll('.day');
+// for (let i = 0; i < day.length; i += 1){
+//   function zoomTexto (){
+//     if (day[i].style.fontSize == '20px'){
+//       day[i].style.fontSize = '30px';
+//     } else if (day[i].style.fontSize = '30px'){
+//       day[i].style.fontSize = '20px';
+//     }
+//   }
+//   day[i].addEventListener('mouseover', zoomTexto);
+// }
 //Implemente uma função que adiciona uma legenda com cor para a tarefa criada no exercício anterior. Esta função deverá receber como parâmetro uma string ("cor") e criar dinamicamente um elemento de tag <div> com a classe task .
 function newTaskDiv(color) {
 
@@ -134,11 +160,14 @@ function newTaskDiv(color) {
   tasksContainer.appendChild(newTask);
 };
 
-newTaskDiv('green');
+newTaskDiv('blue');
+
+function corTaskAula (){
+
+}
 
 //Implemente uma função que adiciona um evento que ao clicar no elemento com a tag <div> referente a cor da sua tarefa, atribua a este elemento a classe task selected , ou seja, quando sua tarefa possuir a classe task selected ela estará selecionada.
 
-let selectedTask = document.getElementsByClassName('task selected');
 let task = document.querySelector('.task');
 function clicarCorTask (event){
     if (task.className == "task"){
@@ -148,8 +177,30 @@ function clicarCorTask (event){
     }
 }
 task.addEventListener('click', clicarCorTask);
+
+let outroTask = document.querySelector('.outro-tasks');
+function clicarCorTask2 (event){
+  if (outroTask.className == "outro-tasks"){
+    event.target.className = "outro-tasks selected2";
+  } else if (outroTask.className == "outro-tasks selected2"){
+    event.target.className = "outro-tasks";
+  }
+}
+outroTask.addEventListener('click', clicarCorTask2);
+
 //Implemente uma função que adiciona um evento que ao clicar em um dia do mês no calendário, atribua a este dia a cor da legenda da sua tarefa selecionada.
 
+
+//   {
+   
+//     let oldColor = "#eee";
+//     if (day[i].style.color == oldColor){
+//       day[i].style.color = newColor;
+//     }
+//   });
+// }
+
+// pegarCor();
 
 //Implemente uma função que adiciona uma tarefa personalizada ao calendário. A função deve receber como parâmetro a string com o nome da tarefa (ex: "cozinhar") e criar dinamicamente um elemento com a tag <span> contendo a tarefa.
 
@@ -162,14 +213,9 @@ function newTaskSpan(task) {
   
 };
 
-newTaskSpan('Projetos:');
+newTaskSpan('Dia de projeto');
+
 //BÔNUS Implemente uma função que, ao digitar um compromisso na caixa de texto "COMPROMISSOS", adiciona o item à lista "MEUS COMPROMISSOS" ao clicar no botão "ADICIONAR".
-
-
-
-
-
-
 let digitarInput = document.querySelector('#task-input');
 let btnAdd = document.querySelector('#btn-add');
 let apareceLista = document.querySelector('.task-list');
