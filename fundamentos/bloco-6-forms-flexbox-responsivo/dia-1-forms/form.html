@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - currículo</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <header>
+        <h1>Currículo</h1>
+    </header>
+    <main>
+        <form>
+            <fieldset>
+                <legend>
+                    Dados Pessoais
+                </legend>
+                <label for="email">E-mail
+                    <input id="email" type="email" name="email" maxlength="50" required>
+                </label>
+                <label for="cpf">CPF
+                    <input id="cpf" type="text" name="cpf" maxlength="11" required>
+                </label>
+                <label for="endereco">Endereço
+                    <input id="endereco" type="text" name="endereco" maxlength="200" required>
+                </label>
+            
+                <label for="cidade">Cidade
+                    <input id="cidade" type="text" maxlength="28" required>
+                </label>
+                <select name="estado" required>
+                    <p>Estado</p>
+                    <option value="ba">
+                        Bahia
+                    </option>
+                    <option value="sp">
+                        São Paulo
+                    </option>
+                    <option value="rj">
+                        Rio de Janeiro
+                    </option>
+                    <option value="mg">
+                        Minas Gerais
+                    </option>
+                </select>
+                <label for="tipo" required>Tipo
+                    <input id="tipo" type="radio" name="tipo">Casa
+                    <input id="tipo" type="radio" name="tipo">Apartamento
+                </label>
+                
+            </fieldset>
+            <fieldset>
+                <legend>
+                    Dados do seu último emprego
+                </legend>
+                <label for="resumo">Resumo do currículo
+                    <textarea name=”resumo” id=”resumo” maxlength="1000" cols="150" rows="3" required>
+                    </textarea>
+                    
+                </label>
+                <label for="cargo">Cargo
+                    <input id="cargo" type="text" maxlength="40" required>
+                </label>
+                <label for="descricao-cargo">Descrição do cargo
+                    <input id="descricao-cargo" type="text" maxlength="500" required>
+                </label>
+                <label for="data">Data de início
+                    <input id="data" type="date" >
+                </label>
+            </fieldset>
+            <div id="btn">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </div>
+            
+        </form>
+    </main> 
+</body>
+</html>

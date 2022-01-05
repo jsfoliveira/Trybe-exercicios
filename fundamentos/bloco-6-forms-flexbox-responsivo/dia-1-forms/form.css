@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+    border: 2px solid black;
+    margin-top: 25px;
+    background-color: rgba(231, 231, 227, 0.877);
+}
+
+fieldset {
+    background-color: rgba(231, 231, 227, 0.877);
+}
+
+#email,
+#cpf,
+#endereco,
+#cidade,
+#resumo,
+#cargo,
+#descricao-cargo {
+    width: 100%;
+    margin-top: 13px;
+}
+
+#data,
+#estado,
+#tipo {
+    margin-top: 13px;
+}
+
+#btn {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* #btn-enviar,
+#btn-limpar {
+    width: 100px;
+    background-color: cornflowerblue
+} */
