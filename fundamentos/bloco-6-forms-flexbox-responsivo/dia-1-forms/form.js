@@ -33,11 +33,6 @@ window.onload = function (){
 //     //validar dado de cada input
 //     let nome = document.querySelector('[name=name]');
 //     if (nome.value.length)
-
-
-
-
-
 //     let clearButton = document.querySelector('#btn-limpar');
 //     clearButton.addEventListener('click', clearFields)
 // }
