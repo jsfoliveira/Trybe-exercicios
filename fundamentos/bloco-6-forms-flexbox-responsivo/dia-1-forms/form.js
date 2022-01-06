@@ -12,15 +12,8 @@ function createStateOptions() {
   }
   createStateOptions();
 
-
-// O dia deve ser > 0 e <= 31.
-// O mês deve ser > 0 e <= 12.
-// O ano não pode ser negativo.
-// Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
-
 //Antes de tudo, precisa interromper o fluxo padrão do requered nos campos (qd nao digita nada no input, aparece uma alerta). Precisa interromper com o preventDefault para que consiga tratar os dados antes.
 
-const data = document.querySelector('#data');
 window.onload = function (){
     createStateOptions();
     const btnEnviar = document.querySelector('#btn-enviar');
@@ -28,18 +21,47 @@ window.onload = function (){
        
         event.preventDefault();
 
+        //validar dado de cada input
+        //validando o name
+        let nome = document.querySelector('[name=name]');
+        if (nome.value.length > 40 || nome.value.length === 0){
+          alert('Nome inválido!')
+        }
     }
     btnEnviar.addEventListener('click', submit);
-//     //validar dado de cada input
-//     let nome = document.querySelector('[name=name]');
-//     if (nome.value.length)
-//     let clearButton = document.querySelector('#btn-limpar');
-//     clearButton.addEventListener('click', clearFields)
-// }
 
-// function limiteData (){
-//     let valorData = data.value;
-    // if (valorData)
+    //Crie um botão Limpar que limpa todos os campos do formulário e a <div> com seu currículo também.
+    let btnLimpar = document.querySelector('#btn-limpar');
+    function limparTudo (){
+      let nome = document.querySelector('[name=name]');
+      nome.value = '';
+      let email = document.querySelector('[name=email]');
+      email.value = '';
+      let cpf = document.querySelector('[name=cpf]');
+      cpf.value = '';
+      let endereco = document.querySelector('[name=endereco]');
+      endereco.value = '';
+      let cidade = document.querySelector('[name=cidade]');
+      cidade.value = '';
+      let estado = document.querySelector('[name=state]');
+      estado.value = '';
+      let cargo = document.querySelector('[name=cargo]');
+      cargo.value = '';
+      let descricao = document.querySelector('[name=descricao]');
+      descricao.value = '';
+      let textArea = document.querySelector('textarea');
+      textArea.value = '';
+      console.log(textArea)
 }
+btnLimpar.addEventListener('click', limparTudo);
+}
+
+// O dia deve ser > 0 e <= 31.
+// O mês deve ser > 0 e <= 12.
+// O ano não pode ser negativo.
+// Caso alguma das condições seja inválida no momento do envio do formulário, exibir via alert uma mensagem de erro contextualizada.
+
+
+
 
 
