@@ -19,7 +19,7 @@ window.onload = function (){
     const btnEnviar = document.querySelector('#btn-enviar');
     function submit(event){
        
-        event.preventDefault();
+        // event.preventDefault();
 
         //validar dado de cada input
         //validando o name
