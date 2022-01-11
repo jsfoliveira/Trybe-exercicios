@@ -1,0 +1,71 @@
+body {
+    font: 1.2em/1.2 Helvetica, arial, sans-serif;
+}
+
+h1 {
+    font-size: 1.8em;
+    margin: .9em 0 0 0;
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container-imagens {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.container-imagens figure img {
+    width: 240px;
+    height: 300px;
+    padding: 10px 10px;
+}
+
+.container-imagens figure figcaption {
+    border: 2px solid black;
+}
+
+/* Altere a cor de fundo (isso vai te ajudar a perceber quando a media query teve efeito) ; */
+@media screen and (min-width:794px) {
+    body {
+        background-color: cornflowerblue;
+    }
+}
+
+/* Ajuste o tamanho da fonte; */
+@media screen and (min-width:794px) {
+    body article p {
+        margin: 10px 30px;
+        font-size: 26px;
+    }
+}
+
+/* Ajuste as margens da página; */
+@media screen and (max-width:794px) {
+    body article p {
+        margin: 10px 10px;
+        font-size: 16px;
+    }
+
+    .container-imagens {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+
+    }
+}
+
+/* Faça as imagens serem mostradas em duas colunas. */
