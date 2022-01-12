@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="hotel.css">
+  <title>Hotel Trybe</title>
+</head>
+<body>
+  <header class="header-trybe">
+      <img src="./trybe-logo.jpg" alt="logo-trybe">
+      <h1>Hotel Trybe</h1>
+  </header>
+  <main>
+        <form>
+            <section class="hotel-form">
+                <h3>Reserve seu quarto!</h3>
+
+                <label>Check-in
+                    <input type="date" class="inputCheckin">
+                </label>
+                <label>Check-out
+                    <input type="date" class="inputCheckout">
+                </label>
+            </section>
+            <section class="hotel-form">Quartos:
+                <label>
+                    <input type="radio" name="room" class="bedroom" value="comum">
+                    Comum
+                </label>
+                <label>
+                    <input type="radio" name="room" class="bedroom" value="club">
+                    Club
+                </label>
+                <label>
+                    <input type="radio" name="room" class="bedroom" value="luxo">
+                    Luxo
+                </label>
+            </section>
+            <section>
+                <p>Pessoas:</p>
+                <select class="hotel-form">
+                    <option class="nPessoas" value="1">1</option>
+                    <option class="nPessoas" value="2">2</option>
+                    <option class="nPessoas" value="3">3</option>
+                    <option class="nPessoas" value="4">4</option>
+                </select>
+            </section>
+            <section class="hotel-form">
+                <textarea placeholder="Escreva a sua observação" class="obs" rows="5" cols="50">
+                </textarea>
+            </section>
+            <button id="submit-btn" type="submit">Enviar</button>
+            <section class="list-section">
+                <h3>Lista de reservas</h3>
+                <ol class="lista-reserva">
+
+                </ol>
+            </section>
+            <button id="clear-btn">Limpar</button>
+        </form>
+    </section>
+  </main>
+  <script src="hotel.js"></script>
+</body>
+</html>
