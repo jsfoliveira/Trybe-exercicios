@@ -75,3 +75,32 @@ function parExiste (objeto, chave, valor){
   }
 };
 console.log(parExiste(lesson1,'materia', 'Matemática'));
+
+//BONUS/1. Crie uma função para contar quantos estudantes assistiram às aulas de Matemática. Use o objeto criado no exercício 5.
+console.log(allLessons);
+const valorMat1 = Object.values(allLessons)[0];
+const valorMat2 = Object.values(allLessons)[1];
+const valorMat3 = Object.values(allLessons)[2];
+console.log(valorMat1);
+console.log(valorMat2);
+console.log(valorMat3);
+
+function contarMatematica (objeto) {
+  const array = Object.keys(objeto);
+  console.log(objeto.array[i].materia);
+  // for (i = 0; i < array.length; i += 1){
+  //   if (objeto.array[i].materia)
+  // }
+
+}
+
+console.log(contarMatematica(allLessons));
+
+// for (i = 0; i < allLessons.length; i += 1){
+//   if (Object.values(allLessons)[i] === 'Matemática'){
+
+//     console.log()
+//   }
+// }
+
+//BONUS/2. Crie uma função que deverá retornar um objeto que representa o relatório do professor ou professora, as aulas que ele ou ela ministrou e o número total de estudantes. Use o objeto criado no exercício 5:
