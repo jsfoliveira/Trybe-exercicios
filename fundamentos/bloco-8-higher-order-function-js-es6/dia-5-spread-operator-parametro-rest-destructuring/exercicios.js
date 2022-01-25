@@ -79,3 +79,48 @@ console.log(swap(myList));
 const palio = ['Palio', 'Fiat', 2019];
 const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
 const chiron = ['Chiron', 'Bugatti', 2016];
+const toObject = ([name, brand, year]) => ({ name, brand, year });
+console.log(toObject(palio));
+
+// 07 - Escreva uma função shipLength que, dado um objeto representando um navio, retorna o comprimento dele, mostrando também a devida unidade de comprimento:
+const ships = [
+  {
+    name: 'Titanic',
+    length: 269.1,
+    measurementUnit: 'meters',
+  },
+  {
+    name: 'Queen Mary 2',
+    length: 1132,
+    measurementUnit: 'feet',
+  },
+  {
+    name: 'Yamato',
+    length: 256,
+    measurementUnit: 'meters',
+  },
+];
+// DIFICULDADE PRA BOTAR EM FUNÇÃO
+ return ships.forEach((element) => {
+    const {name, length} = element;
+    console.log(`${name} is ${length}`);
+  });
+
+// 08 - Escreva uma função greet que, dado o nome de uma pessoa, retorna uma mensagem de cumprimento:
+
+const greet = (nome, fala = 'Hi') => `${fala}, ${nome}`;
+console.log(greet('John')) // 'Hi John'
+console.log(greet('John', 'Good morning')) // 'Good morning John'
+
+// 09 - Existe um objeto yearSeasons que representam as estações do ano. cada estação é uma chave deste objeto, e o valor de cada chave é um array de strings, representando os meses daquela estação. A partir deste objeto, desestruture as estações do ano e espalhe-as em um array de meses do ano.
+const yearSeasons = {
+  spring: ['March', 'April', 'May'],
+  summer: ['June', 'July', 'August'],
+  autumn: ['September', 'October', 'November'],
+  winter: ['December', 'January', 'February'],
+};
+
+const {spring, summer, autumn, winter} = yearSeasons;
+console.log(yearSeasons);
+const juntaTudo = [...spring, ...summer, ...autumn, ...winter];
+console.log(juntaTudo);

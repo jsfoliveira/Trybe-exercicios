@@ -80,3 +80,16 @@ console.log(informacao);
 // Com o objeto em mãos, imprima no console uma frase de sua escolha utilizando os dados do objeto criado anteriormente. Para isso, utilize a desestruturação de objetos em conjunto com template literals.
 const {meuNome, idade, nationality} = user;
 console.log(`Meu nome é ${meuNome}, tenho ${idade} anos e sou ${nationality}`);
+
+// EXERCICIO 3
+const yearSeasons = {
+  spring: ['March', 'April', 'May'],
+  summer: ['June', 'July', 'August'],
+  autumn: ['September', 'October', 'November'],
+  winter: ['December', 'January', 'February'],
+};
+
+const {spring, summer, autumn, winter} = yearSeasons;
+console.log(yearSeasons);
+const juntaTudo = [...spring, ...summer, ...autumn, ...winter];
+console.log(juntaTudo);
