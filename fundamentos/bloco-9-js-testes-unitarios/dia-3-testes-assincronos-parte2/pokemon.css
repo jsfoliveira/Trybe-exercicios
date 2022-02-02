@@ -1,0 +1,39 @@
+#pokemons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+}
+
+​ #pokemons div {
+    text-align: center;
+    border: 1px solid palevioletred;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background: url('https://i.pinimg.com/originals/df/4e/8b/df4e8ba28f912bf9cdf9fa0dfc196411.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+​#pokemons h2 {
+    color: rgb(230, 9, 119);
+}
+
+​h2 {
+    font-family: 'Zen Kurenaido', sans-serif;
+    text-align: center;
+}
+
+​.link {
+    cursor: pointer;
+    color: rgb(16, 17, 13);
+}
+
+​.details-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
