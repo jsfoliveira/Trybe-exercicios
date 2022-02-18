@@ -1,13 +1,18 @@
-import Compras from './Componentes/Compras';
-import Greeting from './Componentes/Greeting';
+import React from 'react';
+import pokemons from './data';
+import Pokedex from './Componentes/Pokedex';
 
-function App() {
+class App extends React.Component {
+render() {
   return (
     <>
-      <Compras />
-      <Greeting name='Juliana' lastName='Oliveira' />
+      <h1> Pokedex </h1>
+      <Pokedex pokemons={pokemons} />
+
     </>
   );
+}
+
 }
 
 export default App;
