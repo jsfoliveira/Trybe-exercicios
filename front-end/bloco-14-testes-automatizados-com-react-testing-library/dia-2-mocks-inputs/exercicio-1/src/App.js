@@ -6,15 +6,23 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      joke: '',
+      // joke: '',
+      nome: '',
+      email: '',
     };
   }
 
-  componentDidMount() {
-    const API_URL = 'https://icanhazdadjoke.com/';
-    fetch(API_URL, { headers: { Accept: 'application/json' } })
-      .then((response) => response.json())
-      .then((data) => this.setState({ joke: data.joke }));
+  // componentDidMount() {
+  //   const API_URL = 'https://icanhazdadjoke.com/';
+  //   fetch(API_URL, { headers: { Accept: 'application/json' } })
+  //     .then((response) => response.json())
+  //     .then((data) => this.setState({ joke: data.joke }));
+  // }
+
+  handleInput(e) {
+    const { name, value } = e.target;
+    console.log(name, value);
+    this.setState({ [name]: value });
   }
 
   // async componentDidMount  () {
@@ -26,12 +34,42 @@ class App extends React.Component {
 
 
   render() {
-    const { joke } = this.state;
+    const { nome, email } = this.state;
+    // const { joke } = this.state;
 
     return (
-      <div className="App">
-        {joke}
+      <>
+        {/* <div className="App">
+          {joke}
+        </div> */}
+        <div>
+        <h1>Teste de inputs</h1>
+        <p>
+          <label htmlFor="nome">
+            Nome
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              value={ nome }
+              onChange={ (e) => this.handleInput(e) }
+            />
+          </label>
+        </p>
+        <p>
+          <label htmlFor="email">
+            Email:
+            <input
+              type="text"
+              id="email"
+              name="email"
+              value={ email }
+              onChange={ (e) => this.handleInput(e) }
+            />
+          </label>
+        </p>
       </div>
+      </>
     );
   }
 }
