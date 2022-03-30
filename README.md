@@ -1,10 +1,13 @@
-# Fundamentos do Desenvolvimento Web white_check_mark
-Bloco 1: Introdução - Unix & Shell hourglass_flowing_sand
- 1-3: Unix & Bash - Part 1
- 1-4: Unix & Bash - Part 2
- 1-5: Shell Script
-Bloco 2: Git & GitHub
- 2-1: O que é e para que serve?
+# Exerícios desenvolvidos no curso de desenvolvimento da Trybe
+## Nesse repositório consta o módulo de Fundamentos e parte do módulo de Front-end.
+
+### Fundamentos do Desenvolvimento Web white_check_mark
+####Bloco 1: Introdução - Unix & Shell hourglass_flowing_sand
+####1.3: Unix & Bash - Part 1
+####1.4: Unix & Bash - Part 2
+####1.5: Shell Script
+####Bloco 2: Git & GitHub
+ ####2.1: O que é e para que serve?
  2-2: Entendendo os comandos
  2-3: Internet - Entendendo como ela funciona
 Bloco 3: Introdução - HTML & CSS
